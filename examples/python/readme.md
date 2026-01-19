@@ -6,23 +6,27 @@ This Streamlit application demonstrates the capabilities of the AWS Agent Squad 
 
 ## 🎯 Current Demos
 
-### 🎬 [AI Movie Production](../movie-production/README.md)
+### 🎬 [AI Movie Production](./movie-production/readme.md)
 **Requirements**: AWS Account with Amazon Bedrock access (Claude models enabled)
 
 Bring your movie ideas to life with this AI-powered production assistant. Describe your movie concept, select a genre and target audience, and let the system create a comprehensive script outline and recommend actors for the main roles based on real-time research.
 
-### ✈️ [AI Travel Planner](../travel-planner/README.md)
+### ✈️ [AI Travel Planner](./travel-planner/readme.md)
 **Requirements**: Anthropic API Key
 
 Enter your destination and travel duration, and the system will research attractions, accommodations, and activities in real-time to create a personalized, day-by-day itinerary based on your preferences.
 
+### 📧 [E-commerce Email Simulator](./email-simulator/readme.md)
+**Requirements**: AWS Account with Amazon Bedrock access (Claude models enabled)
+
+Simulate email-based customer support for an e-commerce platform. Write customer emails and receive professional AI-generated responses that handle order inquiries, shipment tracking, returns, and product questions.
 
 
 ## 🚀 Getting Started
 
 ### Prerequisites
 - Python 3.8 or higher
-- For Movie Production Demo:
+- For Movie Production Demo and E-commerce Email Simulator:
   - AWS account with access to Amazon Bedrock
   - AWS credentials configured ([How to configure AWS credentials](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-files.html))
   - Claude models enabled in Amazon Bedrock ([Enable Bedrock model access](https://docs.aws.amazon.com/bedrock/latest/userguide/model-access.html))
@@ -66,6 +70,15 @@ Your personal travel assistant powered by AI! Experience collaboration between:
 - **ResearcherAgent** ([AnthropicAgent](https://awslabs.github.io/agent-squad/agents/built-in/anthropic-agent) with Claude 3 Haiku): Performs real-time destination research
 - **PlannerAgent** ([AnthropicAgent](https://awslabs.github.io/agent-squad/agents/built-in/anthropic-agent) with Claude 3 Sonnet): Creates personalized day-by-day itineraries
 - Coordinated by a [**Custom Agent**](https://awslabs.github.io/agent-squad/agents/custom-agents) as Supervisor Agent
+
+### 📧 E-commerce Email Simulator
+**Prerequisite**: AWS Account with Amazon Bedrock access (Claude models enabled)
+
+Simulate email-based customer support with tool-augmented AI agents:
+- **OrderManagementAgent** ([BedrockLLMAgent](https://awslabs.github.io/agent-squad/agents/built-in/bedrock-llm-agent) with Claude 3 Sonnet): Handles orders, shipments, and returns using tools
+- **ProductInfoAgent** ([BedrockLLMAgent](https://awslabs.github.io/agent-squad/agents/built-in/bedrock-llm-agent) with Claude 3 Haiku): Provides product information
+- **CustomerServiceSupervisor** ([BedrockLLMAgent](https://awslabs.github.io/agent-squad/agents/built-in/bedrock-llm-agent) with Claude 3.5 Sonnet): Coordinates responses
+- Coordinated by a [**SupervisorAgent**](https://awslabs.github.io/agent-squad/agents/built-in/supervisor-agent)
 
 ## 🛠️ Technologies Used
 - Streamlit for UI

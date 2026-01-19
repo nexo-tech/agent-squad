@@ -27,4 +27,13 @@ Your personal travel assistant powered by AI! Experience collaboration between:
 - **ResearcherAgent** ([AnthropicAgent](https://awslabs.github.io/agent-squad/agents/built-in/anthropic-agent) with Claude 3 Haiku): Performs real-time destination research
 - **PlannerAgent** ([AnthropicAgent](https://awslabs.github.io/agent-squad/agents/built-in/anthropic-agent) with Claude 3 Sonnet): Creates personalized day-by-day itineraries
 - Coordinated by a [**SupervisorMode**](https://awslabs.github.io/agent-squad/agents/built-in/supervisor-agent) using the Planner as supervisor
+
+### 📧 E-commerce Email Simulator
+**Requirements**: AWS Account with Amazon Bedrock access (Claude models enabled)
+
+Simulate email-based customer support for an e-commerce platform! AI agents collaborate to handle:
+- **OrderManagementAgent** ([BedrockLLMAgent](https://awslabs.github.io/agent-squad/agents/built-in/bedrock-llm-agent) with Claude 3 Sonnet): Handles order status, shipment tracking, and returns
+- **ProductInfoAgent** ([BedrockLLMAgent](https://awslabs.github.io/agent-squad/agents/built-in/bedrock-llm-agent) with Claude 3 Haiku): Provides product information and recommendations
+- **CustomerServiceSupervisor** ([BedrockLLMAgent](https://awslabs.github.io/agent-squad/agents/built-in/bedrock-llm-agent) with Claude 3.5 Sonnet): Coordinates the team and compiles professional email responses
+- All coordinated by a [**SupervisorAgent**](https://awslabs.github.io/agent-squad/agents/built-in/supervisor-agent)
 """)
